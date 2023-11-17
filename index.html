@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ucapan Ulang Tahun</title>
+    <title>Selamat Ulang Tahun</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -41,13 +41,13 @@
       // Function to ask for wishes
       function satu() {
         Swal.fire({
-          title: "Satu",
-          html: "Baca dulu <br> bentar dong",
-          imageUrl: "img/kecewa.gif",
+          title: "Hallooo",
+          html: "Hallo orang yang suka manggil nama doang ❤️ <br> Baca dulu ini bentar yaa",
+          imageUrl: "img/hello.gif",
           imageWidth: 400,
           imageHeight: 200,
           imageAlt: "Ucapan Ulang Tahun",
-          confirmButtonText: "Mulai",
+          confirmButtonText: "Iyaa",
         }).then((result) => {
           // Check if the confirm button was clicked
           if (result.isConfirmed) {
@@ -60,9 +60,9 @@
       // Function to ask for celebration
       function dua() {
         Swal.fire({
-          imageUrl: "img/pubg.gif",
-          title: "Dua",
-          html: "Semoga harimu menyenangkan!",
+          imageUrl: "img/ultah1.gif",
+          title: "Selamat Ulang Tahun Tataa 🥳",
+          html: "",
           confirmButtonText: "Lanjut",
         }).then((result) => {
           // Check if the confirm button was clicked
@@ -76,9 +76,25 @@
       // Function to ask for a gift
       function tiga() {
         Swal.fire({
-          imageUrl: "img/nugas.gif",
-          title: "Tiga",
-          html: "Semoga harimu menyenangkan!",
+          imageUrl: "img/ultah.gif",
+          title: "",
+          html: "semoga doa dan harapanmu terkabul <br> semoga kamu jadi orang yang lebih baik setiap harinya",
+          confirmButtonText: "Lanjut",
+        }).then((result) => {
+          // Check if the confirm button was clicked
+          if (result.isConfirmed) {
+            // Show another SweetAlert
+            tigab();
+          }
+        });
+      }
+
+      // Function to ask for a gift
+      function tigab() {
+        Swal.fire({
+          imageUrl: "img/ayo.gif",
+          title: "",
+          html: "sama satu lagi <br> semoga bisa ngurangin makan es nyaa 😊",
           confirmButtonText: "Lanjut",
         }).then((result) => {
           // Check if the confirm button was clicked
@@ -89,21 +105,23 @@
         });
       }
 
+      
+
       // Function to ask for additional wishes
       function empat() {
         Swal.fire({
-          imageUrl: "img/pubg.gif",
-          title: "Empat",
-          html: "Semoga harimu menyenangkan!",
+          imageUrl: "img/ultah2.gif",
+          title: "Nih ada hadiah buat kamu",
+          html: "kamu mau nerima ga?",
           showCancelButton: true,
-          confirmButtonText: "Iya",
+          confirmButtonText: "Mauu",
           cancelButtonText: "Ngga",
         }).then((result) => {
           if (result.isConfirmed) {
             // User clicked "Iya"
             Swal.fire({
-              imageUrl: "img/pubg.gif",
-              title: "Oke lanjut",
+              imageUrl: "img/ketawa.gif",
+              title: "Tapi Boong Wleee",
               confirmButtonText: "Lanjut",
             }).then((result) => {
               if (result.isConfirmed) {
@@ -113,8 +131,8 @@
           } else if (result.dismiss === Swal.DismissReason.cancel) {
             // User clicked "Ngga" or closed the modal
             Swal.fire({
-              imageUrl: "img/surat.gif",
-              title: "gaboleh",
+              imageUrl: "img/nolak.gif",
+              title: "ga boleh nolak",
               confirmButtonText: "balik",
             }).then((result) => {
               if (result.isConfirmed) {
@@ -126,15 +144,31 @@
         });
       }
 
+      // Function to ask for a gift
       function lima() {
         Swal.fire({
-          imageUrl: "img/nugas.gif",
-          title: "Lima",
-          html: "Semoga harimu menyenangkan!",
+          imageUrl: "img/kecewa.gif",
+          title: "Hehehee becanda kok",
+          html: "aku sebenernya pengin ngasih kamu sesuatu, tapi bingung 😔 <br> maaf belum bisa ngasih sesuatu yang mungkin kamu harapin",
+          confirmButtonText: "Lanjut",
+        }).then((result) => {
+          // Check if the confirm button was clicked
+          if (result.isConfirmed) {
+            // Show another SweetAlert
+            enam();
+          }
+        });
+      }
+
+      function enam() {
+        Swal.fire({
+          imageUrl: "img/denger.gif",
+          title: "",
+          html: "buat gantinyaa <br> aku kasih kamu permintaan <br> ketik disini ya cantikk",
           confirmButtonText: "Lanjut",
           input: 'text',
           inputPlaceholder: "Masukkan pesan",
-          confirmButtonText: "Send",
+          confirmButtonText: "Kirim",
         }).then((result) => {
           // Check if the confirm button was clicked and the input is not empty
           if (result.isConfirmed && result.value) {
